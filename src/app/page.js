@@ -57,7 +57,7 @@ const restaurantData = {
       name: "Tandoori Chicken",
       description: "Juicy chicken marinated in yogurt and spices, cooked in a tandoor",
       price: 449,
-      image: "/images/tandoori-chicken.jpg",
+      image: "https://healthyfitnessmeals.com/wp-content/uploads/2020/11/Tandoori-chicken-6.jpg", // Updated image
       category: "Starters"
     },
     {
@@ -65,33 +65,10 @@ const restaurantData = {
       name: "Palak Paneer",
       description: "Cottage cheese cubes in a creamy spinach gravy",
       price: 379,
-      image: "/images/palak-paneer.jpg",
+      image: "https://s3.amazonaws.com/images.chefinyou.com/main/opos-palak-paneer-recipe/main-img4.JPG ",
       category: "Main Course"
     },
-    {
-      id: 7,
-      name: "Gulab Jamun",
-      description: "Soft milk solids dumplings soaked in rose-flavored sugar syrup",
-      price: 199,
-      image: "/images/gulab-jamun.jpg",
-      category: "Desserts"
-    },
-    {
-      id: 8,
-      name: "Mango Lassi",
-      description: "Refreshing yogurt drink blended with mango pulp and spices",
-      price: 149,
-      image: "/images/mango-lassi.jpg",
-      category: "Beverages"
-    },
-    {
-      id: 9,
-      name: "Naan Bread",
-      description: "Soft leavened flatbread baked in tandoor, brushed with butter",
-      price: 79,
-      image: "/images/naan.jpg",
-      category: "Breads"
-    }
+
   ],
   specialOffers: [
     {
@@ -333,37 +310,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Chefs Section */}
-      <section id="chefs" className="py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Meet Our Culinary Artists</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {restaurantData.chefs.map((chef) => (
-              <div key={chef.id} className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src={chef.image} 
-                  alt={chef.name}
-                  className="w-full md:w-1/3 h-64 md:h-auto object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-orange-600">{chef.name}</h3>
-                  <p className="text-gray-600 font-semibold">{chef.position}</p>
-                  <div className="mt-4 space-y-2">
-                    <p className="flex items-center">
-                      <Award className="w-5 h-5 text-orange-600 mr-2" />
-                      <span>Expertise: {chef.expertise}</span>
-                    </p>
-                    <p className="flex items-center">
-                      <Clock className="w-5 h-5 text-orange-600 mr-2" />
-                      <span>Experience: {chef.experience}</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Special Offers */}
       <section className="py-16 bg-orange-50">
